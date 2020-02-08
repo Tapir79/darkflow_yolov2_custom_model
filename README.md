@@ -69,6 +69,11 @@ For a decent model you need at least 1000 images per detected class
   ````
 * You can also download the complete dataset here (needs a lot of disk space): https://storage.googleapis.com/openimages/web/download_v4.html
 * These images come with annotations but I did my own
+* Create a folder called `` training_data`` 
+* Place your images inside this folder
+* Go to ``custom_model_project`` folder and open `` draw_box.py``
+* Replace ``image_folder = 'C:\\Users\\saara\\projects\\darkflow_yolov2_custom_model\\training_data\\oneclassimages\\Person'``
+  with your own absolute path
 ## Annotate data 
 * In custom_model_project run: 
   ````
