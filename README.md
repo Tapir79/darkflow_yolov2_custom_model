@@ -41,14 +41,17 @@ python setup.py build_ext --inplace
 
 ### Testing that everything is working
 In terminal run webcam test: 
+
 ````conda activate darkflow
-python process_video.py````
+python process_video.py
+````
 
 Get any mp4 -video of your choice. For demo choose a short and small one.  
 
 This is how you create a labeled video:
+````
 python flow --model cfg/yolo.cfg --load darkflow/bin/yolov2.weights --demo IMG_0972.mp4 --saveVideo
-
+````
 
 # Custom object detection: 
 For a decent model you need at least 1000 images per detected class
@@ -60,11 +63,15 @@ For a decent model you need at least 1000 images per detected class
 * For the data collection I used 
   https://github.com/EscVM/OIDv4_ToolKit
   that collects images from https://storage.googleapis.com/openimages/web/index.html
-* I run python main.py downloader --classes Person --type_csv train --limit 1000
-* Download also the complete dataset here (needs a lot of disk space): https://storage.googleapis.com/openimages/web/download_v4.html
+* I run 
+  ````
+  python main.py downloader --classes Person --type_csv train --limit 1000
+  ````
+* You can also download the complete dataset here (needs a lot of disk space): https://storage.googleapis.com/openimages/web/download_v4.html
 * These images come with annotations but I did my own
 ## Annotate data 
 * In custom_model_project run: 
-* 
+  ````
+  ````
 
-## Train model 
+## Train model  
