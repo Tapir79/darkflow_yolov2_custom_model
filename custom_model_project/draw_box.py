@@ -25,6 +25,24 @@ def line_select_callback(click, release):
     global br_list
     tl_list.append((int(click.xdata), int(click.ydata)))
     br_list.append((int(release.xdata), int(release.ydata)))
+    object_list.append(obj)
+
+def onkeypress(event):
+    global tl_list
+    global br_list
+    global br_list 
+    global img
+       
+    if event.key == 'q':
+        print('pressed q')
+        print(tl_list, br_list)
+        tl_list = []
+        br_list = []
+        img = None
+        plt.close()
+
+def toggle_selector(event):
+    toggle_selector.RS.set_active(True)
 
 if __name__ == '__main__':
     for n, image_file in enumerate(os.scandir(image_folder)):
@@ -43,9 +61,13 @@ if __name__ == '__main__':
         toggle_selector.RS = RectangleSelector(
             ax, line_select_callback,
             drawtype ='box', useblit=True,
+            # 1 means left mouse click, values from matplotlib documentation
             button=[1], minspanx =5, minspany=5,
             spancoords='pixels', interactive=True
         )
+
+        # Connect callbacks
         # send mouse button event to callback function
-        plt.connect('button_press_event', line_select_callback)
+        bbox = plt.connect('button_press_event', toggle_selector)
+        key = plt.connect('key_press_event', onkeypress)
         plt.show()
