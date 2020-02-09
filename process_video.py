@@ -6,20 +6,20 @@ import time
 # Custom options
 # weights are in ckpt folder. as PROFILE file
 # if last file is called 'tiny-yolo-voc-1c-2700' then 'load': 2700
-# option = {
-#     'model': 'cfg/tiny-yolo-voc-1c.cfg',
-#     'load': 2700,
-#     'threshold': 0.15,
-#     'gpu': 0.9
-# }
-
-# original YOLOv2 options
 option = {
-    'model': 'cfg/yolo.cfg',
-    'load': 'bin/yolov2.weights',
+    'model': 'cfg/tiny-yolo-voc-1c.cfg',
+    'load': 16000,
     'threshold': 0.15,
     'gpu': 0.9
 }
+
+# original YOLOv2 options
+# option = {
+#     'model': 'cfg/yolo.cfg',
+#     'load': 'bin/yolov2.weights',
+#     'threshold': 0.15,
+#     'gpu': 0.9
+# }
 
 # initialize the model
 tfnet = TFNet(option)

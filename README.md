@@ -73,15 +73,8 @@ python flow --model cfg/yolo.cfg --load darkflow/bin/yolov2.weights --demo IMG_0
 ````
 
 # Custom object detection: 
-We're not training everything from scratch. Instead we're using something called transfer learning. This is the case when you have a *small dataset and pretrained model with similar data*. 
 
-* We take a pretrained model like yolov2 or yolov2-tiny. This is the **base model**
-* We remove the **head** of the base model a.k.a the few first layers of the model
-* We **freeze** the base model. This means that we don't touch the weights of the base model anymore. 
-* We create our own custom head and attach it to the base model.
-* The custom head is what we're training here with our custom images.
-
-For a decent model you need at least 1000 good images and good labels per detected class. With decent we're talking about 70-80 % detection accuracy. 
+For a decent model you need at least 1000 good images and good labels per detected class. With decent we're talking about 60 % detection accuracy. 
 * Images should be from different angles and you should have images of the detected object partly covered etc.
 * You can also try to make your own image pyramids and twist, flip, rotate and squash the images before labeling. This is like manual pooling.  
 * The more images you have the better model you get.   
