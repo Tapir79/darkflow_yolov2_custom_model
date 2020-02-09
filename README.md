@@ -74,7 +74,7 @@ python flow --model cfg/yolo.cfg --load darkflow/bin/yolov2.weights --demo IMG_0
 
 # Custom object detection: 
 
-For a decent model you need at least 1000 good images and good labels per detected class. With decent we're talking about 60 % detection accuracy. 
+For a decent model you need at least 1000 good images and good labels per detected class. With decent we're talking about 20-50 % detection accuracy. 
 * Images should be from different angles and you should have images of the detected object partly covered etc.
 * You can also try to make your own image pyramids and twist, flip, rotate and squash the images before labeling. This is like manual pooling.  
 * The more images you have the better model you get.   
@@ -147,4 +147,4 @@ https://drive.google.com/drive/folders/0B1tW_VtY7onidEwyQ2FtQVplWEU
     'gpu': 0.9
   }
   ````
-* run ``process_video.py``
+* run ``python process_video.py``

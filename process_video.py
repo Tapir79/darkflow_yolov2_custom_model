@@ -8,7 +8,7 @@ import time
 # if last file is called 'tiny-yolo-voc-1c-2700' then 'load': 2700
 option = {
     'model': 'cfg/tiny-yolo-voc-1c.cfg',
-    'load': 16000,
+    'load': 17625,
     'threshold': 0.15,
     'gpu': 0.9
 }
@@ -25,10 +25,11 @@ option = {
 tfnet = TFNet(option)
 colors = [tuple(255 * np.random.rand(3)) for i in range(5)]
 
-#capture = cv2.VideoCapture('IMG_0975.mp4')
-capture = cv2.VideoCapture(0)
+capture = cv2.VideoCapture('IMG_0980.mp4')
+# capture = cv2.VideoCapture(0)
 capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+
 
 while(capture.isOpened()):
     stime = time.time()
