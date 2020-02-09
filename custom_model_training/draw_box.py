@@ -6,19 +6,20 @@ import cv2
 from matplotlib.widgets import RectangleSelector
 from pathlib import Path
 from generate_xml import write_xml
+import sys
 
 # global constants
 img = None 
 tl_list = []
 br_list = [] 
 object_list  = [] 
-
+print(sys.argv)
 # constants 
 
 #image_folder = 'C:\\Users\\saara\\projects\\darkflow_yolov2_custom_model\\training_data\\oneclassimages\\Person'
-image_folder = 'mario'
+image_folder = 'images'
 savedir = 'annotations'
-obj = 'mario'
+obj = 'scissors'
 
 # create a callback function
 # first click is top left corner
@@ -49,10 +50,11 @@ def toggle_selector(event):
 if __name__ == '__main__':
     for n, image_file in enumerate(os.scandir(image_folder)):
         img = image_file
-        fig, ax = plt.subplots(1, figsize =(1.5, 8)) 
-        # where the image is displayed on the screen
-        mngr = plt.get_current_fig_manager()
-        mngr.window.setGeometry(250, 40, 800, 600)
+        fig, ax = plt.subplots(1) 
+        
+        # # where the image is displayed on the screen
+        # mngr = plt.get_current_fig_manager()
+        # mngr.window.setPosition(250, 120, 1280, 1024)
         #
         image = cv2.imread(image_file.path)
         # matplotlib and opencv work in different color spaces
@@ -74,4 +76,4 @@ if __name__ == '__main__':
         key = plt.connect('key_press_event', onkeypress)
         plt.tight_layout()
         plt.show()
-        plt.close(fig)
+        plt.close()
