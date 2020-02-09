@@ -1,8 +1,9 @@
 # Intro
-* This project is for **Windows users**. For Linux there are plenty of ML tools and frameworks available but for Windows there are just a few. 
+* This project is for **Windows users**. For Linux there are plenty of ML tools and frameworks available but for Windows there are just a few.
+* I cloned this amazing repo https://github.com/thtrieu/darkflow (GNU licence) that enables you to run YOLOv2 on Windows. Unfortunately YOLOv3 is not yet supported. Following the instructions of Mark Jay [https://www.youtube.com/channel/UC2W0aQEPNpU6XrkFCYifRFQ ](https://www.youtube.com/watch?v=PyjBd7IDYZs&list=PLX-LrBk6h3wSGvuTnxB2Kj358XfctL4BM) I was able to create a custom image labeler. 
+The hardest part in every Python project is the environment setup and the dependency hell. Good luck with that!  
 * If you want to run this locally with GPU acceleration (like you really should) you need a compatible NVIDIA graphics card. If you can find your graphics card here, you are good to go: https://en.wikipedia.org/wiki/CUDA
-I cloned this amazing repo https://github.com/thtrieu/darkflow (GNU licence) that enables you to run YOLOv2 on Windows. Unfortunately YOLOv3 is not yet supported. Following the instructions of Mark Jay [https://www.youtube.com/channel/UC2W0aQEPNpU6XrkFCYifRFQ ](https://www.youtube.com/watch?v=PyjBd7IDYZs&list=PLX-LrBk6h3wSGvuTnxB2Kj358XfctL4BM) I was able to create a custom image labeler. 
-The hardest part in every Python project is the environment setup and the dependency hell. Good luck with that! 
+
 
 # Installation
 
