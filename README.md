@@ -83,7 +83,7 @@ We're not training everything from scratch. Instead we're using something called
 
 For a decent model you need at least 1000 good images and good labels per detected class. With decent we're talking about 70-80 % detection accuracy. 
 * Images should be from different angles and you should have images of the detected object partly covered etc.
-* You can also try to make your own image pyramids and twist the images before labeling. This is like manual convolution.  
+* You can also try to make your own image pyramids and twist the images before labeling. This is like manual pooling.  
 * The more images you have the better model you get.   
 * For every image you need an annotation. It is metadata saying that in these coordinates is my image and what it is representing
 
