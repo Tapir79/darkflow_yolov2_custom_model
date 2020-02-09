@@ -9,6 +9,7 @@
 training_data/
 custom_model_training/images
 custom_model_training/annotations
+custom_model_training/OID
 models/
 videos/
 
